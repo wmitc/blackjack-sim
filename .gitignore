@@ -1,0 +1,25 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+build/
+dist/
+.pytest_cache/
+.venv/
+venv/
+env/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Generated simulation artifacts
+results/
+*.csv
+*.png
+!docs/**/*.png
+
+# OS / editor
+.DS_Store
+.vscode/
+.idea/
