@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "blackjack-sim"
+version = "0.1.0"
+description = "Monte Carlo blackjack simulator quantifying the EV and variance of basic strategy vs Hi-Lo card counting."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "wmitc" }]
+keywords = ["blackjack", "card-counting", "monte-carlo", "quant", "simulation"]
+dependencies = [
+    "numpy>=1.24",
+    "pandas>=2.0",
+    "matplotlib>=3.7",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=7.0", "jupyter>=1.0"]
+
+[project.scripts]
+blackjack-sim = "blackjack_sim.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
